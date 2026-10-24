@@ -1,6 +1,7 @@
 # Java Programming Lab Record Portfolio ☕
 
 An interactive, responsive single-page **Java Programming Laboratory Portfolio** featuring a modern glassmorphic interface, dark/light theme switching, split-view workspace, embedded PDF viewer, and complete academic lab records for Weeks 1 through 12.
+https://crk2006.github.io/java-record-website/
 
 ---
 
