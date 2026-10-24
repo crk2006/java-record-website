@@ -50,10 +50,10 @@ No build tools, bundlers, or package managers required. Simply open `index.html`
 
 ```bash
 # Clone the repository
-git clone https://github.com/crk2006/java-lab-portfolio.git
+git clone https://github.com/crk2006/java-record-website.git
 
 # Navigate to project directory
-cd java-lab-portfolio
+cd java-record-website
 
 # Open in browser (macOS)
 open index.html
