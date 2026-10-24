@@ -1285,7 +1285,7 @@ body {
       <path d="M12 2l2.2 6.8L21 11l-6.8 2.2L12 20l-2.2-6.8L3 11l6.8-2.2L12 2z"/>
     </svg>
     <span>Java Lab Record</span>
-    <span class="brand-badge">AIML 2025–26</span>
+    <span class="brand-badge">AI 2025–26</span>
   </a>
 
   <!-- Center Theme Switcher -->
@@ -1338,7 +1338,7 @@ body {
       <!-- Credentials -->
       <div class="student-details">
         <div class="student-title-badge">
-          <span>Department of Computer Science & Engineering</span>
+          <span>Department of Artificial Intelligence</span>
         </div>
         <h1 class="student-name">V. Chandan Raj Kumar</h1>
         <div class="student-meta-strip">
@@ -1347,8 +1347,8 @@ body {
             <span class="val">25EU02128</span>
           </div>
           <div class="meta-pill">
-            <span class="label">Branch</span>
-            <span class="val">AIML</span>
+            <span class="label">Department</span>
+            <span class="val">AI</span>
           </div>
           <div class="meta-pill">
             <span class="label">Section</span>
@@ -1683,7 +1683,7 @@ Sum (75) is ODD.`
 
     <span class="cmt">// Default constructor chaining to parameterized</span>
     <span class="kw">public</span> <span class="fn">Student</span>() {
-        <span class="kw">this</span>(<span class="str">"Chandan"</span>, <span class="num">2128</span>, <span class="str">"AIML"</span>);
+        <span class="kw">this</span>(<span class="str">"Chandan"</span>, <span class="num">2128</span>, <span class="str">"AI"</span>);
     }
 
     <span class="kw">public</span> <span class="fn">Student</span>(String name, <span class="kw">int</span> rollNo, String branch) {
@@ -1705,7 +1705,7 @@ Sum (75) is ODD.`
         s2.<span class="fn">display</span>();
     }
 }`,
-        output: `Student: Chandan         | Roll: 2128   | Branch: AIML
+        output: `Student: Chandan         | Roll: 2128   | Branch: AI
 Student: Arun Kumar     | Roll: 2105   | Branch: CSE`
       },
       {
@@ -1849,14 +1849,14 @@ Token 6: 25EU02128`
 
 <span class="kw">public class</span> <span class="type">SingleInheritanceDemo</span> {
     <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
-        Student s = <span class="kw">new</span> Student(<span class="str">"Chandan"</span>, <span class="num">19</span>, <span class="num">101</span>, <span class="str">"AIML"</span>);
+        Student s = <span class="kw">new</span> Student(<span class="str">"Chandan"</span>, <span class="num">19</span>, <span class="num">101</span>, <span class="str">"AI"</span>);
         s.<span class="fn">display</span>();
     }
 }`,
         output: `Name   : Chandan
 Age    : 19
 Roll No: 101
-Branch : AIML`
+Branch : AI`
       },
       {
         title: "Dynamic Method Dispatch (Runtime Polymorphism)",
@@ -1907,7 +1907,7 @@ Drawing Rectangle 4x6`
 <span class="pkg">package</span> college;
 <span class="kw">public class</span> <span class="type">Student</span> {
     <span class="kw">public void</span> <span class="fn">show</span>() {
-        System.out.println(<span class="str">"Student Name: Chandan (AIML)"</span>);
+        System.out.println(<span class="str">"Student Name: Chandan (AI)"</span>);
     }
 }
 
@@ -1930,7 +1930,7 @@ Drawing Rectangle 4x6`
         f.<span class="fn">show</span>();
     }
 }`,
-        output: `Student Name: Chandan (AIML)
+        output: `Student Name: Chandan (AI)
 Faculty: Dr. K. Sharma (Computer Science)`
       }
     ]
@@ -2162,7 +2162,7 @@ Priya      | Marks: [90, 85, 92, 89] | Average: 89.00`
     programs: [
       {
         title: "Streams API Functional Query Pipeline",
-        problem: "Process student records using Java Streams to filter students by department (AIML), filter by GPA threshold, sort descending, and group by section.",
+        problem: "Process student records using Java Streams to filter students by department (AI), filter by GPA threshold, sort descending, and group by section.",
         code: `<span class="kw">import</span> java.util.*;
 <span class="kw">import</span> java.util.stream.*;
 
@@ -2171,20 +2171,20 @@ Priya      | Marks: [90, 85, 92, 89] | Average: 89.00`
 <span class="kw">public class</span> <span class="type">StreamsDataPipeline</span> {
     <span class="kw">public static void</span> <span class="fn">main</span>(String[] args) {
         List&lt;StudentRecord&gt; batch = List.<span class="fn">of</span>(
-            <span class="kw">new</span> StudentRecord(<span class="str">"Chandan"</span>, <span class="str">"AIML"</span>, <span class="num">9.5</span>),
+            <span class="kw">new</span> StudentRecord(<span class="str">"Chandan"</span>, <span class="str">"AI"</span>, <span class="num">9.5</span>),
             <span class="kw">new</span> StudentRecord(<span class="str">"Aditya"</span>,  <span class="str">"CSE"</span>,  <span class="num">8.8</span>),
-            <span class="kw">new</span> StudentRecord(<span class="str">"Neha"</span>,    <span class="str">"AIML"</span>, <span class="num">9.2</span>)
+            <span class="kw">new</span> StudentRecord(<span class="str">"Neha"</span>,    <span class="str">"AI"</span>, <span class="num">9.2</span>)
         );
 
-        System.out.println(<span class="str">"=== AIML High Achievers ==="</span>);
+        System.out.println(<span class="str">"=== AI High Achievers ==="</span>);
         batch.<span class="fn">stream</span>()
-            .<span class="fn">filter</span>(s -> s.<span class="fn">dept</span>().<span class="fn">equals</span>(<span class="str">"AIML"</span>))
+            .<span class="fn">filter</span>(s -> s.<span class="fn">dept</span>().<span class="fn">equals</span>(<span class="str">"AI"</span>))
             .<span class="fn">filter</span>(s -> s.<span class="fn">gpa</span>() >= <span class="num">9.0</span>)
             .<span class="fn">sorted</span>(Comparator.<span class="fn">comparingDouble</span>(StudentRecord::gpa).<span class="fn">reversed</span>())
             .<span class="fn">forEach</span>(s -> System.out.println(<span class="str">"  "</span> + s.<span class="fn">name</span>() + <span class="str">" - GPA: "</span> + s.<span class="fn">gpa</span>()));
     }
 }`,
-        output: `=== AIML High Achievers ===
+        output: `=== AI High Achievers ===
   Chandan - GPA: 9.5
   Neha - GPA: 9.2`
       }
@@ -2419,8 +2419,8 @@ function generateDocumentSheetHTML(data) {
         <td><strong>25EU02128</strong></td>
       </tr>
       <tr>
-        <td class="th-label">Branch & Section</td>
-        <td>AIML — Section B</td>
+        <td class="th-label">Department & Section</td>
+        <td>AI — Section B</td>
         <td class="th-label">Academic Year</td>
         <td>2025–2026</td>
       </tr>

@@ -8,7 +8,7 @@ An interactive, responsive single-page **Java Programming Laboratory Portfolio**
 
 * **Student Name:** V. Chandan Raj Kumar
 * **Roll Number:** `25EU02128`
-* **Department / Branch:** Artificial Intelligence & Machine Learning (`AIML`)
+* **Department / Branch:** Artificial Intelligence (`AI`)
 * **Section:** `B`
 * **Academic Year:** 2025–2026
 * **Course:** Java Programming Laboratory
@@ -84,4 +84,4 @@ java-lab-portfolio/
 
 ## 📜 License
 
-Created for academic submission in the Department of Computer Science & Engineering / AIML. All rights reserved.
+Created for academic submission in the Department of Artificial Intelligence (AI). All rights reserved.
