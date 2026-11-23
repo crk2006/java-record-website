@@ -346,7 +346,6 @@ body {
   padding: 4px;
   background: linear-gradient(135deg, #38bdf8, #8b5cf6, #3b82f6);
   box-shadow: var(--shadow-glow);
-  cursor: pointer;
   transition: var(--transition-smooth);
   position: relative;
 }
@@ -378,30 +377,6 @@ body {
   display: block;
   background: var(--bg-glass-subtle);
 }
-
-.photo-overlay {
-  position: absolute;
-  inset: 4px;
-  border-radius: 50%;
-  background: rgba(0, 0, 0, 0.65);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  opacity: 0;
-  transition: var(--transition-smooth);
-  pointer-events: none;
-}
-
-.profile-photo-container:hover .photo-overlay {
-  opacity: 1;
-  pointer-events: auto;
-}
-
-.photo-overlay svg { width: 22px; height: 22px; color: #fff; margin-bottom: 4px; }
-.photo-overlay span { font-size: 10px; font-weight: 700; color: #fff; text-transform: uppercase; letter-spacing: 0.5px; }
-
-#photoUpload { display: none; }
 
 /* Student Details */
 .student-details {
@@ -1324,15 +1299,10 @@ body {
     <div class="profile-main-group">
       <!-- Photo Frame -->
       <div class="profile-photo-wrap">
-        <div class="profile-photo-container" onclick="document.getElementById('photoUpload').click()" title="Click to change photo">
+        <div class="profile-photo-container">
           <img class="profile-photo" id="profilePhoto" src="chandan.jpg" alt="V. Chandan Raj Kumar"
                onerror="this.src='https://ui-avatars.com/api/?name=Chandan+Raj+Kumar&background=3b82f6&color=fff&size=200';">
-          <div class="photo-overlay">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            <span>Change</span>
-          </div>
         </div>
-        <input type="file" id="photoUpload" accept="image/*">
       </div>
 
       <!-- Credentials -->
@@ -2211,35 +2181,6 @@ function toggleTheme() {
   showToast(isDark ? 'Switched to Light Mode' : 'Switched to Dark Mode');
 }
 
-// ─── Photo Upload ───
-document.getElementById('photoUpload').addEventListener('change', function(e) {
-  const file = e.target.files[0];
-  if (!file) return;
-  const reader = new FileReader();
-  reader.onload = function(ev) {
-    document.getElementById('profilePhoto').src = ev.target.result;
-    showToast('Profile photo updated successfully!');
-  };
-  reader.readAsDataURL(file);
-});
-
-// Drag & drop support on photo frame
-const photoBox = document.querySelector('.profile-photo-container');
-photoBox.addEventListener('dragover', (e) => { e.preventDefault(); photoBox.style.transform = 'scale(1.08)'; });
-photoBox.addEventListener('dragleave', () => { photoBox.style.transform = 'scale(1)'; });
-photoBox.addEventListener('drop', (e) => {
-  e.preventDefault();
-  photoBox.style.transform = 'scale(1)';
-  const file = e.dataTransfer.files[0];
-  if (file && file.type.startsWith('image/')) {
-    const reader = new FileReader();
-    reader.onload = (ev) => {
-      document.getElementById('profilePhoto').src = ev.target.result;
-      showToast('Profile photo updated!');
-    };
-    reader.readAsDataURL(file);
-  }
-});
 
 // ─── Render Weekly Navigation Buttons ───
 function renderWeekNav() {
