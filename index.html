@@ -3,6 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 <title>Java Programming Lab Record Portfolio — V. Chandan Raj Kumar (25EU02128)</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -348,6 +351,8 @@ body {
   box-shadow: var(--shadow-glow);
   transition: var(--transition-smooth);
   position: relative;
+  pointer-events: none;
+  user-select: none;
 }
 
 .profile-photo-container:hover {
@@ -376,6 +381,16 @@ body {
   object-fit: cover;
   display: block;
   background: var(--bg-glass-subtle);
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+}
+
+.photo-overlay, #photoUpload {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
 }
 
 /* Student Details */
